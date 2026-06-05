@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>郭记豌豆鲜粉｜安阳老味道 · 现漏手工粉</title>
+  <meta name="description" content="郭记豌豆鲜粉，安阳文峰区三十余年老店，主打现漏手工豌豆鲜粉。安阳美食、安阳特色小吃、安阳早餐推荐、来安阳必吃。" />
+  <meta name="keywords" content="郭记豌豆鲜粉, 安阳美食, 安阳特色小吃, 安阳早餐推荐, 安阳老字号, 豌豆鲜粉, 文峰区美食, 河南特色小吃, 安阳旅游美食, 来安阳必吃, 安阳打卡美食, 手工豌豆粉" />
+  <meta property="og:title" content="郭记豌豆鲜粉｜安阳老味道 · 现漏手工粉" />
+  <meta property="og:description" content="三十余年匠心传承，一碗粉承载一座城的记忆。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_CN" />
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500;700;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "郭记豌豆鲜粉",
+    "alternateName": "Guoji Pea Noodle Restaurant",
+    "description": "安阳文峰区三十余年老店，主打现漏手工豌豆鲜粉，现做现吃，顾客可看见制作过程。",
+    "servesCuisine": ["河南小吃", "安阳早餐", "豌豆鲜粉"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "河南省",
+      "addressLocality": "安阳市",
+      "streetAddress": "文峰区文峰大道东段27号"
+    },
+    "award": "2025年高德安阳美食榜 本地特色餐饮第一梯队",
+    "priceRange": "¥",
+    "areaServed": "安阳"
+  }
+  </script>
+  <style>
+    :root {
+      --red: #d62828;
+      --gold: #f7b500;
+      --cream: #fff8e7;
+      --orange: #ff8c42;
+      --light-gold: #ffd166;
+      --ink: #1a1a1a;
+      --deep: #6d1616;
+      --paper: #fff1cc;
+      --green: #2f6f4e;
+      --shadow: 0 24px 70px rgba(109, 22, 22, .18);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Serif SC", "Songti SC", serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(247,181,0,.16), transparent 25rem),
+        linear-gradient(135deg, rgba(255,255,255,.42) 0 25%, transparent 25% 50%, rgba(255,255,255,.28) 50% 75%, transparent 75%),
+        var(--cream);
+      background-size: auto, 22px 22px, auto;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(109,22,22,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(109,22,22,.025) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mix-blend-mode: multiply;
+      z-index: 5;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      position: fixed;
+      z-index: 10;
+      inset: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px clamp(18px, 5vw, 70px);
+      color: #fff;
+      background: linear-gradient(180deg, rgba(0,0,0,.42), rgba(0,0,0,0));
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand-mark span:first-child {
+      font-family: "Ma Shan Zheng", "Noto Serif SC", serif;
+      font-size: clamp(24px, 4vw, 38px);
+    }
+
+    .brand-mark span:last-child {
+      font-size: 12px;
+      text-transform: uppercase;
+      opacity: .85;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: end;
+      padding: 96px clamp(18px, 6vw, 90px) 58px;
+      color: #fff;
+      position: relative;
+      isolation: isolate;
+      background:
+        linear-gradient(90deg, rgba(36,10,8,.78), rgba(36,10,8,.42), rgba(36,10,8,.12)),
+        url("https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=2200&q=85") center / cover fixed;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 70% 62%, rgba(247,181,0,.28), transparent 30rem),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 1px, transparent 1px 4px);
+      z-index: -1;
+    }
+
+    .hero-content {
+      max-width: 960px;
+      transform: translateY(var(--parallax, 0px));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      background: rgba(214,40,40,.82);
+      border: 1px solid rgba(255,255,255,.36);
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin: 24px 0 14px;
+      font-family: "Ma Shan Zheng", "Noto Serif SC", serif;
+      font-size: clamp(58px, 12vw, 148px);
+      line-height: .88;
+      letter-spacing: 0;
+      text-shadow: 0 10px 40px rgba(0,0,0,.36);
+    }
+
+    .hero-sub {
+      max-width: 730px;
+      font-size: clamp(20px, 3vw, 34px);
+      line-height: 1.55;
+      font-weight: 900;
+      color: #d8d8d8;
+      text-shadow: 0 7px 24px rgba(0,0,0,.42);
+    }
+
+    .trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0 32px;
+    }
+
+    .pill {
+      padding: 9px 13px;
+      background: rgba(255,248,231,.92);
+      color: var(--deep);
+      border-radius: var(--radius);
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: var(--radius);
+      border: 2px solid transparent;
+      font-weight: 900;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .btn.primary { background: var(--gold); color: var(--deep); }
+    .btn.ghost { border-color: rgba(255,255,255,.8); color: #fff; background: rgba(255,255,255,.08); }
+    .btn.red { background: var(--red); color: #fff; }
+
+    section {
+      padding: clamp(64px, 9vw, 116px) clamp(18px, 6vw, 90px);
+      position: relative;
+    }
+
+    .section-head {
+      max-width: 980px;
+      margin-bottom: clamp(30px, 5vw, 54px);
+    }
+
+    .kicker {
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 6vw, 76px);
+      line-height: 1.08;
+      letter-spacing: 0;
+      margin-bottom: 16px;
+      color: var(--deep);
+    }
+
+    .lead {
+      max-width: 820px;
+      font-size: clamp(17px, 2vw, 22px);
+      line-height: 1.9;
+      color: rgba(26,26,26,.78);
+    }
+
+    .photo-grid,
+    .food-grid,
+    .review-grid,
+    .tour-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .tour-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .tour-card,
+    .food-card,
+    .review-card,
+    .step-card,
+    .article-block,
+    .info-panel {
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(109,22,22,.12);
+      box-shadow: 0 18px 50px rgba(109,22,22,.08);
+      overflow: hidden;
+    }
+
+    .tour-card { min-height: 420px; display: flex; flex-direction: column; }
+    .tour-card.highlight { background: var(--red); color: #fff; transform: translateY(-16px); }
+    .tour-card .image,
+    .food-card .image,
+    .gallery-item {
+      min-height: 250px;
+      background: center / cover no-repeat;
+      position: relative;
+    }
+
+    .tour-card .body,
+    .food-card .body,
+    .review-card,
+    .step-card,
+    .article-block,
+    .info-panel { padding: 24px; }
+
+    h3 {
+      font-size: 24px;
+      line-height: 1.25;
+      color: var(--deep);
+      margin-bottom: 10px;
+    }
+
+    .highlight h3, .highlight p { color: #fff; }
+    .tour-card p,
+    .food-card p,
+    .step-card p,
+    .article-block p,
+    .review-card p,
+    .info-panel p { line-height: 1.8; color: rgba(26,26,26,.74); }
+    .highlight p { color: rgba(255,255,255,.88); }
+
+    .story {
+      background:
+        linear-gradient(100deg, rgba(255,209,102,.38), rgba(255,248,231,.92)),
+        var(--cream);
+    }
+
+    .story-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .story-photo {
+      min-height: 560px;
+      border-radius: var(--radius);
+      background: center / cover no-repeat;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story-photo.old {
+      filter: sepia(.36) saturate(1.08);
+      background-image: linear-gradient(rgba(66,30,12,.08), rgba(66,30,12,.18)), url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1300&q=85");
+    }
+
+    .story-photo.now {
+      background-image: linear-gradient(rgba(214,40,40,.1), rgba(247,181,0,.12)), url("https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1300&q=85");
+    }
+
+    .story-text {
+      position: absolute;
+      inset: auto 20px 20px;
+      padding: 20px;
+      background: rgba(255,248,231,.88);
+      border-radius: var(--radius);
+      color: var(--deep);
+      font-weight: 900;
+      backdrop-filter: blur(8px);
+    }
+
+    .food-grid {
+      grid-template-columns: 1.25fr repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    .food-card {
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+    .food-card:hover { transform: translateY(-7px); box-shadow: var(--shadow); }
+    .food-card.hero-dish { grid-row: span 2; background: #fff7dc; }
+    .food-card.hero-dish .image { min-height: 430px; }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      background: var(--gold);
+      color: var(--deep);
+      border-radius: var(--radius);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .process {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(109,22,22,.92), rgba(214,40,40,.72)),
+        url("https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=2200&q=85") center / cover fixed;
+    }
+    .process h2, .process .lead, .process .kicker { color: #fff; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .step-card {
+      background: rgba(255,248,231,.93);
+      color: var(--ink);
+    }
+
+    .step-card h3,
+    .step-card p {
+      color: #333;
+    }
+
+    .step-num {
+      font-family: "Ma Shan Zheng", serif;
+      font-size: 42px;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      columns: 4 240px;
+      column-gap: 16px;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 16px;
+      min-height: var(--h, 280px);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 45px rgba(109,22,22,.12);
+      overflow: hidden;
+    }
+
+    .reviews {
+      background: linear-gradient(180deg, rgba(255,209,102,.26), rgba(255,248,231,.92));
+    }
+    .review-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .stars { color: var(--gold); font-size: 20px; letter-spacing: 0; margin-bottom: 12px; }
+    .platform { color: var(--red); font-weight: 900; font-size: 13px; }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .article-block:nth-child(1) { grid-column: span 2; background: #fff3c4; }
+
+    .route {
+      background:
+        linear-gradient(rgba(255,248,231,.88), rgba(255,248,231,.88)),
+        url("https://images.unsplash.com/photo-1516546453174-5e1098a4b4af?auto=format&fit=crop&w=2200&q=80") center / cover;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+      max-width: 1050px;
+    }
+
+    .time-row {
+      display: grid;
+      grid-template-columns: 110px minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .time {
+      display: grid;
+      place-items: center;
+      background: var(--deep);
+      color: #fff;
+      border-radius: var(--radius);
+      font-weight: 900;
+    }
+
+    .time-card {
+      padding: 22px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(109,22,22,.12);
+    }
+    .time-row.feature .time,
+    .time-row.feature .time-card { background: var(--red); color: #fff; }
+    .time-row.feature h3, .time-row.feature p { color: #fff; }
+
+    .location-wrap {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .map-art {
+      min-height: 460px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(214,40,40,.12), rgba(247,181,0,.22)),
+        url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1500&q=80") center / cover;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .map-pin {
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 0 0 14px rgba(214,40,40,.22), 0 24px 60px rgba(0,0,0,.28);
+      text-align: center;
+    }
+
+    .qr-row {
+      display: grid;
+      grid-template-columns: repeat(2, 120px);
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .qr {
+      aspect-ratio: 1;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(90deg, var(--ink) 10px, transparent 10px) 0 0 / 24px 24px,
+        linear-gradient(var(--ink) 10px, transparent 10px) 0 0 / 24px 24px,
+        #fff;
+      border: 8px solid #fff;
+      box-shadow: inset 0 0 0 1px rgba(26,26,26,.16), 0 12px 30px rgba(109,22,22,.1);
+    }
+
+    footer {
+      padding: 28px clamp(18px, 6vw, 90px);
+      background: var(--deep);
+      color: rgba(255,255,255,.78);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 1000px) {
+      .nav { display: none; }
+      .tour-grid, .food-grid, .review-grid, .article-grid, .steps, .story-wrap, .location-wrap {
+        grid-template-columns: 1fr;
+      }
+      .tour-card.highlight { transform: none; }
+      .food-card.hero-dish { grid-row: auto; }
+      .article-block:nth-child(1) { grid-column: auto; }
+      .steps { gap: 12px; }
+      .story-photo { min-height: 430px; }
+      .hero { background-attachment: scroll; }
+      .process { background-attachment: scroll; }
+    }
+
+    @media (max-width: 620px) {
+      .hero { min-height: 92vh; padding-top: 86px; }
+      .trust, .actions { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
+      .time-row { grid-template-columns: 1fr; }
+      .time { min-height: 48px; }
+      .qr-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .brand-mark span:last-child { display: none; }
+      .tour-card { min-height: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand-mark" href="#home" aria-label="郭记豌豆鲜粉首页">
+      <span>郭记</span>
+      <span>Guoji Pea Noodle Restaurant</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#story">老店故事</a>
+      <a href="#menu">招牌菜</a>
+      <a href="#craft">现漏工艺</a>
+      <a href="#route">打卡路线</a>
+      <a href="#location">找到我们</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">2025 高德安阳美食榜 · 本地特色第一梯队</div>
+        <h1>郭记豌豆鲜粉</h1>
+        <p class="hero-sub">安阳老味道 · 现漏手工粉<br>三十余年匠心传承，一碗粉承载一座城的记忆</p>
+        <div class="trust">
+          <span class="pill">三十余年老店</span>
+          <span class="pill">现漏手工鲜粉</span>
+          <span class="pill">安阳文峰区</span>
+          <span class="pill">本地人必吃</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="#menu">查看菜单</a>
+          <a class="btn ghost" href="https://uri.amap.com/search?keyword=%E9%83%AD%E8%AE%B0%E8%B1%8C%E8%B1%86%E9%B2%9C%E7%B2%89%20%E5%AE%89%E9%98%B3%E5%B8%82%E6%96%87%E5%B3%B0%E5%8C%BA%E6%96%87%E5%B3%B0%E5%A4%A7%E9%81%93%E4%B8%9C%E6%AE%B527%E5%8F%B7" target="_blank" rel="noreferrer">立即导航</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="discover">
+      <div class="section-head reveal">
+        <p class="kicker">Discover Anyang</p>
+        <h2>来到安阳，除了殷墟与文峰塔，还有一碗不该错过的豌豆鲜粉。</h2>
+        <p class="lead">殷墟与文峰塔，代表安阳的历史；郭记豌豆鲜粉，承载安阳最真实的烟火味道。</p>
+      </div>
+      <div class="tour-grid">
+        <article class="tour-card reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="body"><h3>殷墟</h3><p>甲骨文的发源地，中华文明的根脉。游览之后，人的胃口也开始寻找城市里的真实答案。</p></div>
+        </article>
+        <article class="tour-card reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1565353219111-4ff4c808b66b?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="body"><h3>文峰塔</h3><p>千年古塔，安阳地标。从高处望见老城，也望见街巷里热腾腾的日常。</p></div>
+        </article>
+        <article class="tour-card reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="body"><h3>仓巷街</h3><p>老城记忆，烟火气息。青砖、巷口、叫卖声，都是安阳生活的底色。</p></div>
+        </article>
+        <article class="tour-card highlight reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85')"></div>
+          <div class="body"><h3>郭记豌豆鲜粉</h3><p>安阳最接地气的热汤味道。现漏、现煮、现吃，来安阳的那一口念想。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      <div class="section-head reveal">
+        <p class="kicker">Brand Story</p>
+        <h2>安阳人的豌豆鲜粉记忆</h2>
+        <p class="lead">郭记豌豆鲜粉，坐落于安阳市文峰区文峰大道东段27号，三十余年来始终坚持现漏手工制作。顾客可以亲眼看见豌豆浆通过漏勺落入高汤的过程，现做现吃，保留传统小吃最真实的温度。</p>
+      </div>
+      <div class="story-wrap">
+        <div class="story-photo old reveal"><div class="story-text">从小吃到大的老味道，是清晨第一碗热汤粉的记忆。</div></div>
+        <div class="story-photo now reveal"><div class="story-text">今天依然当场现漏，把手艺摆在顾客眼前。</div></div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section-head reveal">
+        <p class="kicker">Signature Dishes</p>
+        <h2>招牌要趁热，手工要现做。</h2>
+        <p class="lead">粉体软糯丝滑、入口劲道，豆香浓郁，汤底鲜香。每一道搭配都保留安阳本地早餐的爽快与踏实。</p>
+      </div>
+      <div class="food-grid">
+        <article class="food-card hero-dish reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1100&q=90')"></div>
+          <div class="body"><span class="tag">招牌必点</span><h3>豌豆鲜粉</h3><p>现漏现做，粉体细腻软糯，汤底鲜香浓郁，豆香四溢。高汤热气升起，红油点缀，是郭记最有辨识度的一碗。</p><p><strong>榜单评语：</strong>素粉清香，吃出传统手工匠心。</p></div>
+        </article>
+        <article class="food-card reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=900&q=85')"></div>
+          <div class="body"><span class="tag">本地人最爱</span><h3>肥肠粉</h3><p>麻辣浓郁汤底，肥肠软糯入味，重口味首选。</p></div>
+        </article>
+        <article class="food-card reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=900&q=85')"></div>
+          <div class="body"><span class="tag">人气搭配</span><h3>冷锅串串</h3><p>麻辣鲜香，与鲜粉搭配点单，解馋下饭。</p></div>
+        </article>
+        <article class="food-card reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85')"></div>
+          <div class="body"><span class="tag">经典搭配</span><h3>烧饼</h3><p>外酥里香，与鲜粉同食，是安阳传统吃法。</p></div>
+        </article>
+        <article class="food-card reveal">
+          <div class="image" style="background-image:url('https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&q=85')"></div>
+          <div class="body"><span class="tag">夏季推荐</span><h3>凉粉</h3><p>爽口开胃，口感Q弹，红油拌制，清爽又有劲。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="craft" class="process">
+      <div class="section-head reveal">
+        <p class="kicker">Handmade Process</p>
+        <h2>每一碗粉，都是现做的。</h2>
+        <p class="lead">从精选豌豆到现场漏粉，从每日熬制高汤到热气腾腾上桌，郭记把传统工艺放在顾客看得见的地方。</p>
+      </div>
+      <div class="steps">
+        <article class="step-card reveal"><div class="step-num">01</div><h3>精选豌豆</h3><p>选用优质豌豆，保证豆香纯正。</p></article>
+        <article class="step-card reveal"><div class="step-num">02</div><h3>研磨成浆</h3><p>传统工艺磨制，保留豌豆天然风味。</p></article>
+        <article class="step-card reveal"><div class="step-num">03</div><h3>现场漏粉</h3><p>当场通过漏勺制作鲜粉，顾客全程可见。</p></article>
+        <article class="step-card reveal"><div class="step-num">04</div><h3>熬制高汤</h3><p>每日新鲜熬制，汤底鲜香浓郁。</p></article>
+        <article class="step-card reveal"><div class="step-num">05</div><h3>现场出餐</h3><p>从制作到上桌，尽量保留最新鲜口感。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head reveal">
+        <p class="kicker">Photo Gallery</p>
+        <h2>热气、红油、晨光和老城街口。</h2>
+      </div>
+      <div class="gallery">
+        <div class="gallery-item reveal" style="--h:380px;background-image:url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=85')"></div>
+        <div class="gallery-item reveal" style="--h:260px;background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=85')"></div>
+        <div class="gallery-item reveal" style="--h:330px;background-image:url('https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=800&q=85')"></div>
+        <div class="gallery-item reveal" style="--h:290px;background-image:url('https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=800&q=85')"></div>
+        <div class="gallery-item reveal" style="--h:360px;background-image:url('https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=800&q=85')"></div>
+        <div class="gallery-item reveal" style="--h:240px;background-image:url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=85')"></div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="section-head reveal">
+        <p class="kicker">Customer Reviews</p>
+        <h2>本地人说，越吃越上头。</h2>
+      </div>
+      <div class="review-grid">
+        <article class="review-card reveal"><div class="stars">★★★★★</div><p>“安阳老味道，从小吃到大，每次回安阳都要来一碗。”</p><span class="platform">高德地图</span></article>
+        <article class="review-card reveal"><div class="stars">★★★★★</div><p>“现漏的粉真的不一样，软糯劲道，汤特别鲜。”</p><span class="platform">大众点评</span></article>
+        <article class="review-card reveal"><div class="stars">★★★★★</div><p>“价格特别公道，用料很扎实，强烈推荐。”</p><span class="platform">Trip.com 携程</span></article>
+        <article class="review-card reveal"><div class="stars">★★★★★</div><p>“越吃越上头，这就是安阳的味道。”</p><span class="platform">高德地图</span></article>
+        <article class="review-card reveal"><div class="stars">★★★★★</div><p>“老店就是不一样，三十年的老味道。”</p><span class="platform">大众点评</span></article>
+        <article class="review-card reveal"><div class="stars">★★★★★</div><p>“本地人必吃，来安阳旅游千万不要错过。”</p><span class="platform">Trip.com 携程</span></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head reveal">
+        <p class="kicker">Anyang Food Encyclopedia</p>
+        <h2>安阳特色小吃百科</h2>
+      </div>
+      <div class="article-grid">
+        <article class="article-block reveal"><h3>什么是豌豆鲜粉</h3><p>豌豆鲜粉是以豌豆为主要原料，经过研磨、过滤、漏制而成的传统手工粉类小吃。与工业化生产的干粉不同，豌豆鲜粉现漏现做，口感软糯细腻、豆香浓郁，是河南安阳地区颇具代表性的传统早餐之一。</p></article>
+        <article class="article-block reveal"><h3>安阳豌豆鲜粉的历史渊源</h3><p>豌豆粉在安阳有着悠久历史，是本地市井饮食文化的重要组成部分。几十年前，街头巷尾的豌豆粉摊便是许多安阳人清晨的日常。</p></article>
+        <article class="article-block reveal"><h3>为什么安阳人喜欢豌豆鲜粉</h3><p>对许多安阳人而言，豌豆鲜粉不只是一种食物，更是一种城市记忆。那碗热气腾腾的鲜粉，承载着童年、家乡与归属感。</p></article>
+        <article class="article-block reveal"><h3>传统现漏工艺解析</h3><p>现漏工艺是郭记最核心的特色：将豌豆浆通过特制漏勺直接落入高汤，现做现吃，保留豌豆天然香气与口感。</p></article>
+        <article class="article-block reveal"><h3>来安阳必吃特色小吃</h3><p>豌豆鲜粉、肥肠粉、扁粉菜、道口烧鸡、安阳血糕、内黄灌肠，都是认识安阳味道的关键词。</p></article>
+      </div>
+    </section>
+
+    <section id="route" class="route">
+      <div class="section-head reveal">
+        <p class="kicker">One-Day Food Route</p>
+        <h2>安阳一日美食路线 · 打卡指南</h2>
+      </div>
+      <div class="timeline">
+        <div class="time-row reveal"><div class="time">09:00</div><div class="time-card"><h3>殷墟博物馆</h3><p>探寻甲骨文，感受三千年文明。</p></div></div>
+        <div class="time-row reveal"><div class="time">11:30</div><div class="time-card"><h3>文峰塔</h3><p>登古塔，俯瞰安阳老城。</p></div></div>
+        <div class="time-row reveal"><div class="time">12:30</div><div class="time-card"><h3>仓巷街</h3><p>漫步历史街区，感受烟火气。</p></div></div>
+        <div class="time-row feature reveal"><div class="time">13:00</div><div class="time-card"><h3>郭记豌豆鲜粉</h3><p>一碗现漏手工粉，品味安阳灵魂味道。</p></div></div>
+        <div class="time-row reveal"><div class="time">14:30</div><div class="time-card"><h3>安阳老城区探索</h3><p>继续感受地道安阳生活。</p></div></div>
+      </div>
+    </section>
+
+    <section id="location">
+      <div class="section-head reveal">
+        <p class="kicker">Location & Contact</p>
+        <h2>找到我们</h2>
+      </div>
+      <div class="location-wrap">
+        <div class="info-panel reveal">
+          <h3>郭记豌豆鲜粉</h3>
+          <p><strong>地址：</strong><a href="https://uri.amap.com/search?keyword=%E9%83%AD%E8%AE%B0%E8%B1%8C%E8%B1%86%E9%B2%9C%E7%B2%89%20%E5%AE%89%E9%98%B3%E5%B8%82%E6%96%87%E5%B3%B0%E5%8C%BA%E6%96%87%E5%B3%B0%E5%A4%A7%E9%81%93%E4%B8%9C%E6%AE%B527%E5%8F%B7" target="_blank" rel="noreferrer">河南省安阳市文峰区文峰大道东段27号</a></p>
+          <p><strong>营业时间：</strong>建议早餐 / 午餐时段到店，具体以实际营业为准。</p>
+          <p><strong>推荐点单：</strong>豌豆鲜粉、肥肠粉、烧饼、冷锅串串。</p>
+          <div class="qr-row">
+            <div><div class="qr" aria-label="微信公众号二维码占位"></div><p>微信公众号</p></div>
+            <div><div class="qr" aria-label="抖音二维码占位"></div><p>抖音 Douyin</p></div>
+          </div>
+          <div class="actions">
+            <a class="btn red" href="https://uri.amap.com/search?keyword=%E9%83%AD%E8%AE%B0%E8%B1%8C%E8%B1%86%E9%B2%9C%E7%B2%89%20%E5%AE%89%E9%98%B3%E5%B8%82%E6%96%87%E5%B3%B0%E5%8C%BA%E6%96%87%E5%B3%B0%E5%A4%A7%E9%81%93%E4%B8%9C%E6%AE%B527%E5%8F%B7" target="_blank" rel="noreferrer">立即导航</a>
+            <a class="btn primary" href="#menu">先看招牌</a>
+          </div>
+        </div>
+        <div class="map-art reveal">
+          <div class="map-pin">文峰区<br>郭记</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>郭记豌豆鲜粉 · 安阳老味道 · 现漏手工粉</span>
+    <span>Guoji Pea Noodle Restaurant · Anyang Local Food Destination</span>
+  </footer>
+
+  <script>
+    const heroContent = document.querySelector(".hero-content");
+    const revealItems = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach(item => io.observe(item));
+
+    window.addEventListener("scroll", () => {
+      const y = Math.min(window.scrollY * 0.08, 42);
+      if (heroContent) heroContent.style.setProperty("--parallax", `${y}px`);
+    }, { passive: true });
+  </script>
+</body>
+</html>
