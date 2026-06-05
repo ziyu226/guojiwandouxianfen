@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no,email=no,address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#D62828">
+  <title>郭记豌豆鲜粉｜安阳老味道 · 现漏手工粉</title>
+  <meta name="description" content="安阳文峰区三十余年老店，现漏手工豌豆鲜粉。来安阳，别错过这一碗老味道。">
+  <meta property="og:title" content="郭记豌豆鲜粉｜安阳老味道">
+  <meta property="og:description" content="三十余年匠心传承，一碗粉承载一座城的记忆。">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80">
+  <style>
+    :root{--red:#d62828;--gold:#f7b500;--cream:#fff8e7;--orange:#ff8c42;--ink:#1a1a1a;--deep:#681515}
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"PingFang SC","Noto Serif SC","Songti SC",serif}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(104,21,21,.035) 1px,transparent 1px),linear-gradient(rgba(104,21,21,.035) 1px,transparent 1px);background-size:22px 22px;z-index:9}
+    a{text-decoration:none;color:inherit}
+    img{display:block;width:100%}
+    .hero{min-height:100svh;padding:calc(env(safe-area-inset-top) + 22px) 18px 28px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(43,8,6,.78)),url("https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1200&q=82") center/cover}
+    .logo{position:absolute;top:calc(env(safe-area-inset-top) + 14px);left:18px;font-size:20px;font-weight:900;text-shadow:0 3px 16px rgba(0,0,0,.35)}
+    .badge{display:inline-block;width:max-content;max-width:100%;padding:7px 10px;border:1px solid rgba(255,255,255,.45);border-radius:8px;background:rgba(214,40,40,.9);font-size:12px;font-weight:800}
+    h1{margin:14px 0 10px;font-size:56px;line-height:.95;letter-spacing:0;font-weight:900;text-shadow:0 10px 34px rgba(0,0,0,.38)}
+    .sub{margin:0 0 18px;font-size:20px;line-height:1.55;font-weight:800;text-shadow:0 5px 18px rgba(0,0,0,.45)}
+    .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:14px}
+    .chip{flex:0 0 auto;padding:7px 10px;border-radius:8px;background:rgba(255,248,231,.94);color:var(--deep);font-size:12px;font-weight:800}
+    .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .btn{height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+    .primary{background:var(--gold);color:var(--deep)}
+    .ghost{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.65);color:#fff}
+    section{padding:54px 18px}
+    .redband{background:var(--red);color:#fff}
+    .goldband{background:linear-gradient(180deg,#fff2c5,var(--cream))}
+    .k{font-size:12px;font-weight:900;color:var(--red);text-transform:uppercase;margin:0 0 8px}
+    .redband .k{color:#ffd166}
+    h2{margin:0 0 14px;color:var(--deep);font-size:34px;line-height:1.16;letter-spacing:0}
+    .redband h2,.redband p,.redband h3{color:#fff}
+    p{font-size:16px;line-height:1.85;color:rgba(26,26,26,.78);margin:0}
+    .redband p{color:rgba(255,255,255,.9)}
+    .sub{color:#d8d8d8}
+    .redband .step h3,.redband .step p{color:#333}
+    .cards{display:grid;gap:12px;margin-top:22px}
+    .card{border-radius:8px;overflow:hidden;background:rgba(255,255,255,.72);border:1px solid rgba(104,21,21,.12);box-shadow:0 14px 36px rgba(104,21,21,.09)}
+    .card img{height:190px;object-fit:cover}
+    .body{padding:16px}
+    h3{margin:0 0 8px;color:var(--deep);font-size:21px;line-height:1.25}
+    .tag{display:inline-block;margin-bottom:10px;padding:5px 8px;border-radius:8px;background:var(--gold);color:var(--deep);font-size:12px;font-weight:900}
+    .dish-hero img{height:260px}
+    .steps{display:grid;gap:10px;margin-top:22px}
+    .step{padding:16px;border-radius:8px;background:rgba(255,248,231,.96);color:var(--ink)}
+    .num{font-size:30px;line-height:1;color:var(--red);font-weight:900;margin-bottom:8px}
+    .reviews{display:grid;gap:10px;margin-top:22px}
+    .review{padding:16px;border-radius:8px;background:#fff;border:1px solid rgba(104,21,21,.1)}
+    .stars{color:var(--gold);font-size:18px;margin-bottom:8px}
+    .route{display:grid;gap:10px;margin-top:22px}
+    .stop{display:grid;grid-template-columns:74px 1fr;gap:10px}
+    .time{border-radius:8px;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+    .stopbody{padding:14px;border-radius:8px;background:rgba(255,255,255,.78)}
+    .hot .time,.hot .stopbody{background:var(--red);color:#fff}
+    .hot h3,.hot p{color:#fff}
+    .loc{display:grid;gap:12px;margin-top:22px}
+    .info{padding:18px;border-radius:8px;background:#fff;border:1px solid rgba(104,21,21,.12)}
+    .map{min-height:230px;border-radius:8px;background:linear-gradient(135deg,rgba(214,40,40,.18),rgba(247,181,0,.25)),url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=80") center/cover;position:relative;overflow:hidden}
+    .pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;text-align:center;font-weight:900;box-shadow:0 0 0 10px rgba(214,40,40,.22)}
+    .fixedbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(env(safe-area-inset-bottom) + 10px);background:rgba(255,248,231,.94);box-shadow:0 -10px 30px rgba(104,21,21,.12);backdrop-filter:blur(10px)}
+    .fixedbar .btn{height:44px}
+    footer{padding:26px 18px 88px;background:var(--deep);color:rgba(255,255,255,.78);font-size:13px;line-height:1.7}
+    .fade{opacity:0;transform:translateY(18px);transition:.55s ease}
+    .fade.on{opacity:1;transform:none}
+    @media(min-width:760px){body{max-width:520px;margin:0 auto;background:#f2dfb8} .fixedbar{left:50%;right:auto;width:520px;transform:translateX(-50%)}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" id="top">
+      <div class="logo">郭记豌豆鲜粉</div>
+      <span class="badge">2025 高德安阳美食榜 · 本地特色第一梯队</span>
+      <h1>郭记<br>豌豆鲜粉</h1>
+      <p class="sub">安阳老味道 · 现漏手工粉<br>三十余年匠心传承，一碗粉承载一座城的记忆。</p>
+      <div class="chips">
+        <span class="chip">现做现吃</span><span class="chip">三十余年老店</span><span class="chip">文峰区</span><span class="chip">本地人必吃</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="#menu">查看招牌</a>
+        <a class="btn ghost" href="https://uri.amap.com/search?keyword=%E9%83%AD%E8%AE%B0%E8%B1%8C%E8%B1%86%E9%B2%9C%E7%B2%89%20%E5%AE%89%E9%98%B3%E5%B8%82%E6%96%87%E5%B3%B0%E5%8C%BA%E6%96%87%E5%B3%B0%E5%A4%A7%E9%81%93%E4%B8%9C%E6%AE%B527%E5%8F%B7">打开导航</a>
+      </div>
+    </section>
+
+    <section class="goldband fade">
+      <p class="k">Discover Anyang</p>
+      <h2>来安阳，别只看古迹，也要吃一碗热乎的老味道。</h2>
+      <p>殷墟与文峰塔，代表安阳的历史；郭记豌豆鲜粉，承载安阳最真实的烟火气。现漏、现煮、现吃，是本地人从小吃到大的早餐记忆。</p>
+      <div class="cards">
+        <article class="card"><img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&w=700&q=78" alt="安阳文化旅行"><div class="body"><h3>安阳旅行的一口收尾</h3><p>看完殷墟、走过老城，最后坐下来，吃一碗现漏手工粉。</p></div></article>
+      </div>
+    </section>
+
+    <section class="fade">
+      <p class="k">Brand Story</p>
+      <h2>安阳人的豌豆鲜粉记忆</h2>
+      <p>郭记豌豆鲜粉坐落于河南省安阳市文峰区文峰大道东段27号。三十余年来，店里坚持现场漏粉，顾客可以看见豌豆浆通过漏勺落入高汤的过程。热气一上来，老味道就回来了。</p>
+    </section>
+
+    <section id="menu" class="fade">
+      <p class="k">Signature Dishes</p>
+      <h2>招牌要趁热，手工要现做。</h2>
+      <div class="cards">
+        <article class="card dish-hero"><img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=82" alt="豌豆鲜粉"><div class="body"><span class="tag">招牌必点</span><h3>豌豆鲜粉</h3><p>粉体细腻软糯，汤底鲜香浓郁，豆香四溢。现漏现吃，是郭记最有记忆点的一碗。</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=700&q=78" alt="肥肠粉"><div class="body"><span class="tag">本地人最爱</span><h3>肥肠粉</h3><p>麻辣浓郁，肥肠软糯入味，重口味首选。</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=78" alt="烧饼"><div class="body"><span class="tag">经典搭配</span><h3>烧饼</h3><p>外酥里香，和鲜粉一起吃，是安阳传统吃法。</p></div></article>
+      </div>
+    </section>
+
+    <section class="redband fade">
+      <p class="k">Handmade Process</p>
+      <h2>每一碗粉，都是现漏的。</h2>
+      <p>郭记的核心，是把手艺摆在顾客眼前。</p>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>精选豌豆</h3><p>保证豆香纯正。</p></div>
+        <div class="step"><div class="num">02</div><h3>研磨成浆</h3><p>保留天然风味。</p></div>
+        <div class="step"><div class="num">03</div><h3>现场漏粉</h3><p>当场制作，全程可见。</p></div>
+        <div class="step"><div class="num">04</div><h3>高汤出餐</h3><p>热汤一浇，香气就起。</p></div>
+      </div>
+    </section>
+
+    <section class="fade">
+      <p class="k">Reviews</p>
+      <h2>本地人说，越吃越上头。</h2>
+      <div class="reviews">
+        <div class="review"><div class="stars">★★★★★</div><p>“安阳老味道，从小吃到大，每次回安阳都要来一碗。”</p></div>
+        <div class="review"><div class="stars">★★★★★</div><p>“现漏的粉真的不一样，软糯劲道，汤特别鲜。”</p></div>
+        <div class="review"><div class="stars">★★★★★</div><p>“价格公道，用料扎实，本地人必吃。”</p></div>
+      </div>
+    </section>
+
+    <section class="goldband fade">
+      <p class="k">Food Route</p>
+      <h2>安阳一日美食路线</h2>
+      <div class="route">
+        <div class="stop"><div class="time">09:00</div><div class="stopbody"><h3>殷墟博物馆</h3><p>探寻甲骨文，感受三千年文明。</p></div></div>
+        <div class="stop"><div class="time">11:30</div><div class="stopbody"><h3>文峰塔</h3><p>登古塔，俯瞰安阳老城。</p></div></div>
+        <div class="stop hot"><div class="time">13:00</div><div class="stopbody"><h3>郭记豌豆鲜粉</h3><p>一碗现漏手工粉，品味安阳灵魂味道。</p></div></div>
+      </div>
+    </section>
+
+    <section id="location" class="fade">
+      <p class="k">Location</p>
+      <h2>找到我们</h2>
+      <div class="loc">
+        <div class="info">
+          <h3>郭记豌豆鲜粉</h3>
+          <p><strong>地址：</strong><a href="https://uri.amap.com/search?keyword=%E9%83%AD%E8%AE%B0%E8%B1%8C%E8%B1%86%E9%B2%9C%E7%B2%89%20%E5%AE%89%E9%98%B3%E5%B8%82%E6%96%87%E5%B3%B0%E5%8C%BA%E6%96%87%E5%B3%B0%E5%A4%A7%E9%81%93%E4%B8%9C%E6%AE%B527%E5%8F%B7">河南省安阳市文峰区文峰大道东段27号</a></p>
+          <p><strong>推荐：</strong>早餐 / 午餐时段到店，具体营业以实际为准。</p>
+        </div>
+        <div class="map"><div class="pin">文峰区<br>郭记</div></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="fixedbar">
+    <a class="btn primary" href="#menu">看招牌</a>
+    <a class="btn primary" href="https://uri.amap.com/search?keyword=%E9%83%AD%E8%AE%B0%E8%B1%8C%E8%B1%86%E9%B2%9C%E7%B2%89%20%E5%AE%89%E9%98%B3%E5%B8%82%E6%96%87%E5%B3%B0%E5%8C%BA%E6%96%87%E5%B3%B0%E5%A4%A7%E9%81%93%E4%B8%9C%E6%AE%B527%E5%8F%B7">去导航</a>
+  </div>
+  <footer>郭记豌豆鲜粉 · 安阳老味道 · 现漏手工粉<br>适配微信内置浏览器的移动 H5 版本</footer>
+
+  <script>
+    (function(){
+      var items=document.querySelectorAll(".fade");
+      if(!("IntersectionObserver" in window)){for(var i=0;i<items.length;i++)items[i].className+=" on";return}
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.className+=" on"})},{threshold:.12});
+      for(var j=0;j<items.length;j++)io.observe(items[j]);
+      document.addEventListener("WeixinJSBridgeReady",function(){},false);
+    })();
+  </script>
+</body>
+</html>
